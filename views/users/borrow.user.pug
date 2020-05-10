@@ -1,0 +1,13 @@
+extends ../layout/common2
+
+block content
+
+  .container  
+    form(action='/users/borrow', method='POST')
+        label Choose your book:
+        span &nbsp
+        select.form-control.shadow-none(name='book')
+          each book in books
+            option= book.title
+        br
+        button.btn.btn-primary.shadow-none(type='submit') Borrow

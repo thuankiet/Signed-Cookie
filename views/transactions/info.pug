@@ -1,0 +1,13 @@
+extends ../layout/common
+
+block content
+  .container
+    h1 List of books were borrowed
+    a(href="/transactions") Back
+    
+    table.table
+      tr
+        th Books
+      each book in books
+        tr
+          td= book.bookName

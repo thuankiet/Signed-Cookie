@@ -1,0 +1,12 @@
+extends ../layout/common
+
+block content
+  .container
+    h1 Create Book
+
+    form(action='/books/create', method='POST')
+      input.form-control.shadow-none(name='title' type='text' placeholder='Title')
+      br
+      input.form-control.shadow-none(name='description' type='text' placeholder='Description')
+      br
+      button.btn.btn-primary.shadow-none(type='submit') Add Book

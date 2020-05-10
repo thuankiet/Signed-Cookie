@@ -1,0 +1,23 @@
+extends ../layout/common
+  
+block content
+
+  .container
+    h1 Books
+    a(href='/books/create') Create New Book
+    
+    table.table
+      tr
+        th Book Name
+        th Description
+        th Update Book
+        th Delete Book
+      each book in books
+        tr
+          td= book.title
+          td= book.description
+          td
+            a.pl-2.pr-2.text-white.rounded(href='/books/edit-form/'+book.id style='background-color:dodgerblue; text-decoration:none; color:white') Update
+          td
+            a.pl-2.pr-2.text-white.rounded(href='/books/' + book.id + '/delete' style='background-color:red; text-decoration:none; color:white') Delete
+    
