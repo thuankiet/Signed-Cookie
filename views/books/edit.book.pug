@@ -1,0 +1,10 @@
+extends ../layout/common
+
+block content
+  
+  .container
+    h1 Edit book
+    
+    form.d-flex(action='/books/edit/'+book.id, method='POST')
+      input.form-control.shadow-none(name='title', type='text', value=book.title)
+      button.btn.btn-primary.ml-2.shadow-none(type='submit') Update

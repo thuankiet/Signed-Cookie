@@ -1,0 +1,16 @@
+extends ../layout/common
+
+block content
+
+  .container
+    h1 Register
+
+    form(action='/auth/create', method='POST')
+      label Email:
+      input.form-control.shadow-none(name='email', type='text', placeholder='Email')
+      label Password:
+      input.form-control.shadow-none(name='password', type='password', placeholder='Password')
+      label User Name:
+      input.form-control.shadow-none(name='userName', type='text', placeholder='User Name')
+      br
+      button.btn.btn-primary.ml-2.shadow-none(type='submit') Register

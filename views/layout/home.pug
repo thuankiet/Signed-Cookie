@@ -1,0 +1,21 @@
+html
+  head
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css") 
+    link(rel='icon' type='image/png' href='https://cdn.glitch.com/27c7efdb-5c56-4c84-a6a9-737047d00772%2Ffavicon.png?v=1588664164997')
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand(href='/') Library
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link(href='/auth/create')
+              | Register
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/auth/login')
+              | Login
+              span.sr-only (current)    
+    
+    block content

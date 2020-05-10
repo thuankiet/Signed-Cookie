@@ -1,0 +1,22 @@
+extends ../layout/common2
+
+block content
+  .container
+    if error
+      each err in error
+        .alert.alert-warning.alert-dismissible.fade.show(role='alert')= err
+    
+    h1 Archives
+    a(href="/users/borrow") Borrow Book
+    br
+    a(href="/users/edit-user/"+user.id) Edit User Name
+    
+    table.table
+      tr
+        th Books
+        th Delete Book
+      each book in user.books
+        tr
+          td= book.bookName
+          td
+            a.pl-2.pr-2.text-white.rounded(href="/users/deleteBook/"+book.bookId,style="background-color:red; text-decoration:none") Delete

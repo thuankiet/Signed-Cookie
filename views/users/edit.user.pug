@@ -1,0 +1,10 @@
+extends ../layout/common2
+
+block content
+
+  .container
+    h1 Edit User
+
+    form.d-flex(action='/users/edit-user/'+user.id, method='POST')
+      input.form-control.shadow-none(name='userName', type='text', value=user.userName)
+      button.btn.btn-primary.ml-2.shadow-none(type='submit') Update
